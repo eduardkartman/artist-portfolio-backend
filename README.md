@@ -57,17 +57,30 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+- npm install -g @nestjs/cli
+- npm install @nestjs/typeorm typeorm pg
 
-## Support
+- **Start backend** : npm run start:dev
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Database: 
+- user: eduar
+- password: edi123
 
-## Stay in touch
+# Connect to PostgreSQL
+psql -U postgres
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+# Create a database
+CREATE DATABASE "ArtworkDB";
 
-## License
+# Create a user with a password
+CREATE USER eduar WITH PASSWORD 'edi123';
 
-Nest is [MIT licensed](LICENSE).
+# Grant all privileges on the database to the user
+GRANT ALL PRIVILEGES ON DATABASE "ArtworkDB" TO eduar;
+
+GRANT ALL PRIVILEGES ON SCHEMA public TO eduar;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO eduar;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO eduar;
+
+
+
