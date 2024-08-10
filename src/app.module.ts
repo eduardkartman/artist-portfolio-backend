@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ArtworksModule } from './artworks/artworks.module';
-import { Artwork } from '../src/artworks/artwork.entity';
+import { Artwork } from './artworks/artwork.entity';
 
 @Module({
   imports: [
@@ -13,6 +13,7 @@ import { Artwork } from '../src/artworks/artwork.entity';
       password: 'edi123',
       database: 'ArtworkDB',
       entities: [Artwork],
+      synchronize: true,
     }),
     ArtworksModule,
   ],

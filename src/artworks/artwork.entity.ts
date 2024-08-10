@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
+@Entity('artwork')
 export class Artwork {
   @PrimaryGeneratedColumn()
   id: number;
@@ -12,5 +12,11 @@ export class Artwork {
   description: string;
 
   @Column()
-  imageUrl: string;
+  image_url: string;
+
+  @Column()
+  linktosite: string;
+
+  @Column()
+  status: boolean;
 }
