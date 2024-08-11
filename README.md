@@ -57,30 +57,34 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
 - npm install -g @nestjs/cli
 - npm install @nestjs/typeorm typeorm pg
 
 - **Start backend** : npm run start:dev
 
-## Database: 
+## Database:
+
 - user: eduar
 - password: edi123
 
 # Connect to PostgreSQL
+
 psql -U postgres
 
 # Create a database
+
 CREATE DATABASE "ArtworkDB";
 
 # Create a user with a password
+
 CREATE USER eduar WITH PASSWORD 'edi123';
 
 # Grant all privileges on the database to the user
+
 GRANT ALL PRIVILEGES ON DATABASE "ArtworkDB" TO eduar;
 
 GRANT ALL PRIVILEGES ON SCHEMA public TO eduar;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO eduar;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO eduar;
-
-
 
