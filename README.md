@@ -75,15 +75,13 @@ psql -U postgres
 # Create a database
 
 CREATE DATABASE "ArtworkDB";
+- the artwork table should be autommatically created because of the artwork.entity.ts
 
 # Create a user with a password
-
 CREATE USER eduar WITH PASSWORD 'edi123';
 
 # Grant all privileges on the database to the user
-
 GRANT ALL PRIVILEGES ON DATABASE "ArtworkDB" TO eduar;
-
 GRANT ALL PRIVILEGES ON SCHEMA public TO eduar;
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO eduar;
 GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO eduar;
